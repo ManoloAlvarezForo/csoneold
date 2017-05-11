@@ -1,0 +1,30 @@
+
+.sidenav {
+    height: 100%;
+    width: 54px;
+    min-width: 54px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #34373a;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding: 5px;
+    text-align: center;
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+    text-decoration: none;
+}
+
+#main {
+    transition: margin-left .5s;
+    margin-left:54px;
+    padding: 0px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav { display: none}
+}

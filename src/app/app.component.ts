@@ -6,5 +6,27 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+
+  isSideNavOpen: boolean
+  constructor() {
+    this.isSideNavOpen = false;
+  }
+
+  sideNavAction() {
+    if (this.isSideNavOpen) {
+      //Closing SideNav
+      document.getElementById("mySidenav").style.width = "54px";
+      document.getElementById("main").style.marginLeft = "54px";
+      document.getElementById("main").style.transition = "margin-left .5s";
+      document.getElementById("main").style.padding = "0px";
+      this.isSideNavOpen = false
+    } else {
+      //Opening SideNav
+      document.getElementById("mySidenav").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+      document.getElementById("mySidenav").style.textAlign = "left";
+      this.isSideNavOpen = true;
+    }
+  }
 }
