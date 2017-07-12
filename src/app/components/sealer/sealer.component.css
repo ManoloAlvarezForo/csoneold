@@ -1,0 +1,23 @@
+.example-form {
+  width: 500px;
+}
+
+.example-full-width {
+  width: 300px;
+}
+
+.test {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    /*align-content: flex-start;*/
+}
+
+.test2 {
+    justify-content: center;
+}
+
+.pp-30 {
+    padding: 30px;
+}

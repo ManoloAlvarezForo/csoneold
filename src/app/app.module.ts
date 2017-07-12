@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { MaterialModule } from "@angular/material";
+import { MaterialModule, OverlayContainer } from "@angular/material";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { SealerComponent } from './components/sealer/sealer.component';
@@ -28,11 +28,17 @@ import { ItemComponent } from './components/item/item.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    MaterialModule.forRoot(),
+    MaterialModule,
     BrowserAnimationsModule,
     FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  constructor(overlayContainer: OverlayContainer) {
+    overlayContainer.themeClass = 'custom-theme';
+  }
+}
+
+

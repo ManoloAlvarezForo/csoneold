@@ -1,15 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
-/* You can add global styles to this file, and also import other style files */
 @font-face {
   font-family: 'Material Icons';
   font-style: normal;
   font-weight: 400;
-  src: url('/node_modules/material-design-icons/iconfont/MaterialIcons-Regular.eot'); /* For IE6-8 */
+  src: url('~material-design-icons/iconfont/MaterialIcons-Regular.eot'); /* For IE6-8 */
   src: local('Material Icons'),
     local('MaterialIcons-Regular'),
-    url('/node_modules/material-design-icons/iconfont/MaterialIcons-Regular.woff2') format('woff2'),
-    url('/node_modules/material-design-icons/iconfont/MaterialIcons-Regular.woff') format('woff'),
-    url('/node_modules/material-design-icons/iconfont/MaterialIcons-Regular.ttf') format('truetype');
+    url('~material-design-icons/iconfont/MaterialIcons-Regular.woff2') format('woff2'),
+    url('~material-design-icons/iconfont/MaterialIcons-Regular.woff') format('woff'),
+    url('~material-design-icons/iconfont/MaterialIcons-Regular.ttf') format('truetype');
 }
 
 .material-icons {
@@ -37,23 +36,35 @@
   font-feature-settings: 'liga';
 }
 
-@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
 
+/* @import '~@angular/material/prebuilt-themes/indigo-pink.css'; */
 /*@import '~@angular/material/prebuilt-themes/pink-bluegrey.css';*/
-
 /*@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';*/
 /*@import '~@angular/material/prebuilt-themes/purple-green.css';*/
-
 
 @import '~bootstrap.min.css';
 
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
+  overflow: hidden;
 }
 
+.man-elevation-z6 {
+    box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+}
+
+.mat-elevation-bottom {
+   box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2);
+}
+
+
 md-card {
-  max-width: 90%;
+  max-width: 97%;
   margin: 2em auto;
 }
 
@@ -61,9 +72,94 @@ md-toolbar-row {
   justify-content: space-between;
 }
 
+.docs-component-sidenav-content {
+    min-height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
 .done {
   position: fixed;
-  bottom: 20px;
+  top: 100px;
   right: 20px;
   color: white;
 }
+
+.scroller2 {
+    width:100%;
+    height: calc(100vh - 128px);
+    overflow: auto;
+}
+
+.s-mini-sidenav {
+    background-color: black;
+    width: 53px;
+    box-shadow: 3px 0 6px rgba(0,0,0,.24);
+    z-index: 1;
+}
+
+ /*Small devices (landscape phones, 34em and up)
+@media (min-width: 34em) { 
+.s-mini-sidenav {background-color: red;} 
+}
+
+ /*Medium devices (tablets, 48em and up)
+@media (min-width: 48em) {
+.s-mini-sidenav {background-color: gray;} 
+}
+
+/* Large devices (desktops, 62em and up)
+@media (min-width: 62em) { 
+.s-mini-sidenav {background-color: cyan;} 
+}*/
+
+/*Extra large devices (large desktops, 75em and up)*/
+@media (min-width: 75em) { 
+.s-mini-sidenav {background-color: white;} 
+}
+
+/* less than 75 */
+@media (max-width: 74.9em) {.s-mini-sidenav {background-color: white;}}
+
+/* less than 62 */
+@media (max-width: 61.9em) {.s-mini-sidenav {background-color: white;}}
+
+/* less than 48 */
+@media (max-width: 47.9em) {.s-mini-sidenav {background-color: white;}}
+
+/* less than 34 */
+@media (max-width: 33.9em) { 
+    .s-mini-sidenav {
+       display: none;
+       } 
+}
+.mat-toolbar .mat-toolbar-row {
+  height: 53px;
+}
+
+
+.s-column {
+display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    max-width: 70%;
+    flex: 1 1 100%;
+    -webkit-box-flex: 1
+}
+
+.s-row {
+  display: flex;
+    box-sizing: border-box;
+    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+}
+
+

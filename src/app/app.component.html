@@ -1,42 +1,18 @@
-<div id="mySidenav" class="sidenav">
-    <button md-icon-button (click)="sideNavAction()"  >
-      <md-icon class="material-icons" style="color:white">menu</md-icon>
-    </button>
-    <div style="padding-bottom:48px;"></div>
-    <button md-icon-button>
-      <md-icon class="material-icons" style="color:white">dashboard</md-icon>
-    </button>
-    <button md-icon-button>
-      <md-icon class="material-icons" style="color:white">list</md-icon>
-    </button>
-    <a href="" class="material-icons" md-button>menu</a>
-</div>
-<div id="main">
-  <md-toolbar  color="primary">
-    <span>
-    <!--<button md-icon-button (click)="openNav()" >
-      <md-icon class="material-icons">menu</md-icon>
-    </button>-->
-    </span>
-    <span>Material app in Angular 4!</span>
-    <span>
-    <button md-icon-button [md-menu-trigger-for]="menu">
-      <md-icon>more_vert</md-icon>
-    </button>
-    </span>
-  </md-toolbar>
-  <md-menu x-position="before" #menu="mdMenu">
-    <button md-menu-item>Option 1</button>
-    <button md-menu-item>Option 2</button>
-  </md-menu>
-  <main>
-    <section>
-      <app-sealer></app-sealer>
-    </section>
-  </main>
-  <span class="done">
-    <button md-fab>
-      <md-icon>check circle</md-icon>
-    </button>
-  </span>
+<div>
+    <md-toolbar color="primary" class="s-toolbar mat-elevation-z6 custom-height">
+      <span>SONE</span>
+      <span>
+      <button md-icon-button [md-menu-trigger-for]="menu"><md-icon>more_vert</md-icon></button>
+      </span>
+    </md-toolbar>
+    <div class="s-row" style="height: 100vh;">
+      <div class="s-mini-sidenav">sidenav</div>
+      <app-sealer class="s-main-contet" style="background-color:darkgray; width: 100%;"></app-sealer>
+    </div>
+  <div id="main" class="m-content">
+<md-menu x-position="before" #menu="mdMenu">
+<button md-menu-item>Option 1</button>
+<button md-menu-item>Option 2</button>
+</md-menu>
+<div>
 </div>
