@@ -1,3 +1,18 @@
-<h1>
-  {{title}}
-</h1>
+<div>
+    <md-toolbar color="primary" class="s-toolbar mat-elevation-z6 custom-height">
+      <span>SONE</span>
+      <span>
+      <button md-icon-button [md-menu-trigger-for]="menu"><md-icon>more_vert</md-icon></button>
+      </span>
+    </md-toolbar>
+    <div class="s-row" style="height: 100vh;">
+      <div class="s-mini-sidenav">sidenav</div>
+      <app-sealer class="s-main-contet" style="background-color:darkgray; width: 100%;"></app-sealer>
+    </div>
+  <div id="main" class="m-content">
+<md-menu x-position="before" #menu="mdMenu">
+<button md-menu-item>Option 1</button>
+<button md-menu-item>Option 2</button>
+</md-menu>
+<div>
+</div>
